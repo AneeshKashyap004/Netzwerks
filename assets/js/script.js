@@ -13,6 +13,7 @@ if(ham && mobileMenu){
   ham.addEventListener('click',()=>{
     mobileMenu.classList.toggle('open');
     ham.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+    ham.classList.toggle('open');
   });
 }
 
@@ -26,6 +27,18 @@ function setActiveLink(){
 }
 setActiveLink();
 
+// Page enter animation
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.body.classList.add('page-enter');
+  requestAnimationFrame(()=>{
+    document.body.classList.add('page-enter-active');
+    // cleanup after animation
+    setTimeout(()=>{
+      document.body.classList.remove('page-enter','page-enter-active');
+    }, 400);
+  });
+});
+
 // Smooth scroll for in-page anchors
 document.addEventListener('click', (e)=>{
   const a = e.target.closest('a[href^="#"]');
@@ -35,6 +48,20 @@ document.addEventListener('click', (e)=>{
   if(el){
     e.preventDefault();
     el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+});
+
+// Page transition for internal links
+document.addEventListener('click', (e)=>{
+  const a = e.target.closest('a[href]');
+  if(!a) return;
+  const url = new URL(a.href, location.href);
+  const sameOrigin = url.origin === location.origin;
+  const isFileNav = !a.target && sameOrigin && !url.hash;
+  if(isFileNav){
+    e.preventDefault();
+    document.body.classList.add('page-exit','page-exit-active');
+    setTimeout(()=>{ location.href = a.href; }, 180);
   }
 });
 
@@ -80,6 +107,24 @@ if(art){
     });
   });
 }
+
+// Theme toggle (light/dark)
+const root = document.documentElement;
+const THEME_KEY = 'theme';
+function applyTheme(t){
+  if(t==='light') root.setAttribute('data-theme','light');
+  else root.removeAttribute('data-theme');
+}
+applyTheme(localStorage.getItem(THEME_KEY));
+document.querySelectorAll('[data-toggle-theme]')?.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const isLight = root.getAttribute('data-theme')==='light';
+    const next = isLight? 'dark':'light';
+    if(next==='light') localStorage.setItem(THEME_KEY,'light');
+    else localStorage.removeItem(THEME_KEY);
+    applyTheme(next);
+  });
+});
 
 // Simple form validation
 function validateForm(form){

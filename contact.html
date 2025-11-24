@@ -6,21 +6,30 @@
   <title>Contact – Netzwerks</title>
   <meta name="description" content="Contact Netzwerks for design and front‑end projects.">
   <link rel="stylesheet" href="assets/css/style.css">
+  <meta property="og:title" content="Contact – Netzwerks"/>
+  <meta property="og:description" content="Contact Netzwerks for design and front‑end projects."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Contact – Netzwerks"/>
+  <meta name="twitter:description" content="Contact Netzwerks for design and front‑end projects."/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact – Netzwerks","publisher":{"@type":"Organization","name":"Netzwerks","email":"contact@netzwerk.systems","telephone":"+91 63618 27210"}}</script>
 </head>
 <body>
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="10" fill="url(#g)"/><path d="M13 30l6.5-12 5 8 4-7 7.5 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs></svg>
+        <img src="assets/images/logo.png" alt="Netzwerks logo" style="width:32px;height:32px;object-fit:contain;border-radius:6px"/>
         Netzwerks
       </a>
       <nav class="nav-links">
         <a href="index.html" data-nav>Home</a>
         <a href="about.html" data-nav>About</a>
         <a href="services.html" data-nav>Services</a>
-       
         <a href="contact.html" data-nav>Contact</a>
       </nav>
+      <button class="theme-toggle" title="Toggle theme" data-toggle-theme aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/><circle cx="12" cy="12" r="4"/></svg>
+      </button>
       <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
@@ -30,7 +39,6 @@
         <a href="index.html" data-nav>Home</a>
         <a href="about.html" data-nav>About</a>
         <a href="services.html" data-nav>Services</a>
-        
         <a href="contact.html" data-nav>Contact</a>
       </div>
     </div>
@@ -65,7 +73,7 @@
           <p class="muted">We offer expert IT refurbishment, rental, and service solutions—providing high-quality, affordable refurbished equipment and flexible rental options. Our services include repairs, maintenance, and full IT support to ensure your technology runs smoothly and cost-effectively.</p>
           <div class="hr"></div>
           <div style="border-radius:12px; overflow:hidden; border:1px solid var(--border)">
-            <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=77.55%2C12.9%2C77.65%2C12.98&amp;layer=mapnik" style="width:100%;height:320px;border:0"></iframe>
+            <iframe title="Map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=77.55%2C12.9%2C77.65%2C12.98&amp;layer=mapnik" style="width:100%;height:320px;border:0"></iframe>
           </div>
         </div></div>
       </div>
@@ -73,8 +81,29 @@
   </main>
 
   <footer class="footer section">
-    <div class="container">
-      <p class="muted">© <span id="y"></span> Netzwerks.</p>
+    <div class="container cols">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <img src="assets/images/logo.png" alt="Netzwerks logo" style="width:28px;height:28px;object-fit:contain;border-radius:6px"/>
+          Netzwerks
+        </div>
+        <p class="muted">IT products and solutions.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <a href="index.html">Home</a><br/>
+        <a href="about.html">About</a><br/>
+        <a href="services.html">Services</a><br/>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p class="muted">No.265, First Floor, 6th Main, 4th Cross Mico Layout, BTM 2nd Stage, Bangalore - 560076</p>
+        <a href="mailto:contact@netzwerk.systems">contact@netzwerk.systems</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:24px">
+      <p class="muted">© <span id="y"></span> Netzwerks. All rights reserved.</p>
     </div>
   </footer>
 
