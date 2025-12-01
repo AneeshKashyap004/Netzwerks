@@ -161,8 +161,8 @@ span,a{color:var(--text-primary)}
 .badge-chip{padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
 .hr{height:1px;background:var(--border);margin:24px 0}
 .center{text-align:center}
-.theme-toggle{margin-left:10px;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.06);cursor:pointer}
-.theme-toggle:hover{box-shadow:var(--shadow)}
+.theme-toggle{background:transparent;border:none;padding:8px;font-size:22px;cursor:pointer;color:var(--text-primary);margin-left:10px}
+.theme-toggle:hover{opacity:.9}
 /* Dropdown */
 [data-dropdown]{border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.04)}
 [data-dropdown] header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px}
@@ -188,7 +188,21 @@ span,a{color:var(--text-primary)}
 
 /* Logos strip */
 .logos{grid-template-columns:repeat(4,minmax(0,1fr)); align-items:center; justify-items:center}
-.logos img{max-width:160px; max-height:56px; width:auto; height:auto; object-fit:contain; filter:grayscale(100%); opacity:.95; padding:8px; background:transparent; border:1px solid var(--border); border-radius:12px}
+/* New brand logos layout (full color, no frames) */
+.brand-logos{display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:40px; justify-items:center; align-items:center}
+.brand-logo{border:none; box-shadow:none; background:transparent; padding:0}
+.brand-logo img{height:60px; width:auto; object-fit:contain; filter:none; transition:transform .2s ease-in-out}
+.brand-logo img:hover{transform:scale(1.05)}
+
+/* Fixed 4x2 brand grid for homepage */
+#brands .brand-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:40px; justify-items:center; align-items:center; margin-top:40px}
+#brands .brand-grid .brand-logo{height:70px; width:auto; object-fit:contain; filter:none; background:transparent; border:none; box-shadow:none}
+@media (max-width: 768px){
+  #brands .brand-grid{grid-template-columns:repeat(2, 1fr); gap:30px}
+}
+@media (max-width: 480px){
+  #brands .brand-grid{grid-template-columns:repeat(1, 1fr)}
+}
 @media (max-width: 720px){
   .logos{grid-template-columns:repeat(2,1fr)}
 }

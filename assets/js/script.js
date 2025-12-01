@@ -108,22 +108,24 @@ if(art){
   });
 }
 
-// Theme toggle (light/dark)
-const root = document.documentElement;
-const THEME_KEY = 'theme';
-function applyTheme(t){
-  if(t==='light') root.setAttribute('data-theme','light');
-  else root.setAttribute('data-theme','dark');
-}
-applyTheme(localStorage.getItem(THEME_KEY) || 'dark');
-document.querySelectorAll('[data-toggle-theme]')?.forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const isLight = root.getAttribute('data-theme')==='light';
-    const next = isLight? 'dark':'light';
-    localStorage.setItem(THEME_KEY, next);
-    applyTheme(next);
+// Theme toggle (sun/moon) per spec
+(function(){
+  const toggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  if(!toggleBtn || !themeIcon) return;
+  function setTheme(mode){
+    document.documentElement.setAttribute('data-theme', mode);
+    localStorage.setItem('theme', mode);
+    themeIcon.textContent = mode === 'light' ? '🌙' : '☀️';
+  }
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  setTheme(savedTheme);
+  toggleBtn.addEventListener('click', ()=>{
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    setTheme(next);
   });
-});
+})();
 
 // Microsoft sign-in (redirect to Azure AD authorize)
 const msBtn = document.getElementById('ms-login');
