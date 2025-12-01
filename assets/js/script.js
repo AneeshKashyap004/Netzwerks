@@ -113,17 +113,57 @@ const root = document.documentElement;
 const THEME_KEY = 'theme';
 function applyTheme(t){
   if(t==='light') root.setAttribute('data-theme','light');
-  else root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme','dark');
 }
-applyTheme(localStorage.getItem(THEME_KEY));
+applyTheme(localStorage.getItem(THEME_KEY) || 'dark');
 document.querySelectorAll('[data-toggle-theme]')?.forEach(btn=>{
   btn.addEventListener('click',()=>{
     const isLight = root.getAttribute('data-theme')==='light';
     const next = isLight? 'dark':'light';
-    if(next==='light') localStorage.setItem(THEME_KEY,'light');
-    else localStorage.removeItem(THEME_KEY);
+    localStorage.setItem(THEME_KEY, next);
     applyTheme(next);
   });
+});
+
+// Microsoft sign-in (redirect to Azure AD authorize)
+const msBtn = document.getElementById('ms-login');
+if(msBtn){
+  msBtn.addEventListener('click', ()=>{
+    const tenant = msBtn.getAttribute('data-tenant')||'common';
+    const clientId = msBtn.getAttribute('data-client-id');
+    const redirect = msBtn.getAttribute('data-redirect') || location.origin + '/';
+    if(!clientId){
+      alert('Microsoft sign-in is not configured. Please set your Client ID.');
+      return;
+    }
+    const params = new URLSearchParams({
+      client_id: clientId,
+      response_type: 'code',
+      redirect_uri: redirect,
+      scope: 'openid profile email offline_access',
+      response_mode: 'query'
+    });
+    const authUrl = `https://login.microsoftonline.com/${tenant}/oauth2/v2.0/authorize?${params.toString()}`;
+    location.href = authUrl;
+  });
+}
+
+// Generic dropdown toggles
+document.querySelectorAll('[data-dropdown]')?.forEach(drop=>{
+  const btn = drop.querySelector('[data-dropdown-toggle]');
+  const panel = drop.querySelector('[data-dropdown-panel]');
+  if(btn && panel){
+    btn.addEventListener('click',()=>{
+      const open = panel.getAttribute('data-open')==='true';
+      panel.setAttribute('data-open', String(!open));
+      panel.style.maxHeight = !open ? panel.scrollHeight + 'px' : '0px';
+    });
+    // initialize
+    panel.style.overflow='hidden';
+    panel.style.transition='max-height .28s ease';
+    panel.style.maxHeight='0px';
+    panel.setAttribute('data-open','false');
+  }
 });
 
 // Simple form validation
