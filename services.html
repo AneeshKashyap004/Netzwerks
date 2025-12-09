@@ -15,6 +15,18 @@
   <meta name="twitter:title" content="Services – Netzwerks"/>
   <meta name="twitter:description" content="Services: design systems, front‑end engineering, and web animations."/>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Netzwerks Services","provider":{"@type":"Organization","name":"Netzwerks"}}</script>
+  <style>
+    /* Brand marquee styles */
+    .brand-carousel { width: 100%; overflow: hidden; position: relative; }
+    .brand-track { display: flex; align-items: center; gap: 40px; width: max-content; animation: scroll-loop 25s linear infinite; }
+    .brand-logo { height: 60px; width: auto; object-fit: contain; background: transparent; border: none; box-shadow: none; }
+    @keyframes scroll-loop { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    /* Row-specific speeds */
+    #brands .brand-carousel:nth-of-type(1) .brand-track { animation-duration: 22s; }
+    #brands .brand-carousel:nth-of-type(2) .brand-track { animation-duration: 28s; }
+    #brands .brand-carousel:nth-of-type(3) .brand-track { animation-duration: 32s; }
+    @media (max-width: 768px) { .brand-logo { height: 45px; } .brand-track { gap: 25px; } }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -28,6 +40,7 @@
         <a href="index.html" data-nav>Home</a>
         <a href="about.html" data-nav>About</a>
         <a href="services.html" data-nav>Services</a>
+        <a href="products.html" data-nav>Products</a>
         <a href="contact.html" data-nav>Contact</a>
       </nav>
       <div class="row" style="align-items:center">
@@ -42,6 +55,7 @@
         <a href="index.html" data-nav>Home</a>
         <a href="about.html" data-nav>About</a>
         <a href="services.html" data-nav>Services</a>
+        <a href="products.html" data-nav>Products</a>
         <a href="contact.html" data-nav>Contact</a>
       </div>
     </div>
@@ -118,22 +132,116 @@
       </div>
     </section>
 
-    <section id="brands" class="section">
+     <section id="brands" class="section">
       <div class="container">
-        <div class="section-head"><h2>Our Parnters</h2></div>
-        
-        <div class="brand-grid">
-          <img src="/assets/images/hp.jpg" class="brand-logo" alt="HP" />
-          <img src="/assets/images/microsoft.jpg" class="brand-logo" alt="Microsoft" />
-          <img src="/assets/images/Lenovo-Logo-768x432.png" class="brand-logo" alt="Lenovo" />
-          <img src="/assets/images/Dell_Logo.svg.png" class="brand-logo" alt="Dell" />
-
-          <img src="/assets/images/Samsung_old_logo_before_year_2015.svg" class="brand-logo" alt="Samsung" />
-          <img src="/assets/images/apple.jpg" class="brand-logo" alt="Apple" />
-          <img src="/assets/images/asus.png" class="brand-logo" alt="Asus" />
-          <img src="/assets/images/acer.png" class="brand-logo" alt="Acer" />
+        <h2>Brands We Deal With</h2>
+        <!-- Row 1: Laptop & Computer Brands -->
+        <div class="brand-carousel">
+          <div class="brand-track">
+            <img src="/public/brand-logos/apple.png" class="brand-logo" alt="Apple" />
+            <img src="/public/brand-logos/hp.png" class="brand-logo" alt="HP" />
+            <img src="/public/brand-logos/dell.png" class="brand-logo" alt="Dell" />
+            <img src="/public/brand-logos/lenovo.png" class="brand-logo" alt="Lenovo" />
+            <img src="/public/brand-logos/asus.png" class="brand-logo" alt="Asus" />
+            <img src="/public/brand-logos/acer.png" class="brand-logo" alt="Acer" />
+            <img src="/public/brand-logos/msi.png" class="brand-logo" alt="MSI" />
+            <img src="/public/brand-logos/samsung.png" class="brand-logo" alt="Samsung" />
+            <img src="/public/brand-logos/lg.png" class="brand-logo" alt="LG" />
+            <img src="/public/brand-logos/huawei.png" class="brand-logo" alt="Huawei" />
+            <img src="/public/brand-logos/xiaomi.png" class="brand-logo" alt="Xiaomi" />
+            <img src="/public/brand-logos/realme.png" class="brand-logo" alt="Realme" />
+            <img src="/public/brand-logos/honor.png" class="brand-logo" alt="Honor" />
+            <img src="/public/brand-logos/fujitsu.png" class="brand-logo" alt="Fujitsu" />
+            <img src="/public/brand-logos/toshiba.png" class="brand-logo" alt="Toshiba" />
+            <img src="/public/brand-logos/panasonic.png" class="brand-logo" alt="Panasonic" />
+            <img src="/public/brand-logos/intel.png" class="brand-logo" alt="Intel" />
+            <img src="/public/brand-logos/amd.png" class="brand-logo" alt="AMD" />
+            <img src="/public/brand-logos/gigabyte.png" class="brand-logo" alt="Gigabyte" />
+            <img src="/public/brand-logos/asrock.png" class="brand-logo" alt="ASRock" />
+            <img src="/public/brand-logos/zotac.png" class="brand-logo" alt="Zotac" />
+            <!-- duplicate for seamless loop -->
+            <img src="/public/brand-logos/apple.png" class="brand-logo" alt="Apple" />
+            <img src="/public/brand-logos/hp.png" class="brand-logo" alt="HP" />
+            <img src="/public/brand-logos/dell.png" class="brand-logo" alt="Dell" />
+            <img src="/public/brand-logos/lenovo.png" class="brand-logo" alt="Lenovo" />
+            <img src="/public/brand-logos/asus.png" class="brand-logo" alt="Asus" />
+            <img src="/public/brand-logos/acer.png" class="brand-logo" alt="Acer" />
+            <img src="/public/brand-logos/msi.png" class="brand-logo" alt="MSI" />
+            <img src="/public/brand-logos/samsung.png" class="brand-logo" alt="Samsung" />
+            <img src="/public/brand-logos/lg.png" class="brand-logo" alt="LG" />
+            <img src="/public/brand-logos/huawei.png" class="brand-logo" alt="Huawei" />
+            <img src="/public/brand-logos/xiaomi.png" class="brand-logo" alt="Xiaomi" />
+            <img src="/public/brand-logos/realme.png" class="brand-logo" alt="Realme" />
+            <img src="/public/brand-logos/honor.png" class="brand-logo" alt="Honor" />
+            <img src="/public/brand-logos/fujitsu.png" class="brand-logo" alt="Fujitsu" />
+            <img src="/public/brand-logos/toshiba.png" class="brand-logo" alt="Toshiba" />
+            <img src="/public/brand-logos/panasonic.png" class="brand-logo" alt="Panasonic" />
+            <img src="/public/brand-logos/intel.png" class="brand-logo" alt="Intel" />
+            <img src="/public/brand-logos/amd.png" class="brand-logo" alt="AMD" />
+            <img src="/public/brand-logos/gigabyte.png" class="brand-logo" alt="Gigabyte" />
+            <img src="/public/brand-logos/asrock.png" class="brand-logo" alt="ASRock" />
+            <img src="/public/brand-logos/zotac.png" class="brand-logo" alt="Zotac" />
+          </div>
         </div>
-        
+
+        <!-- Row 2: Accessory & Peripheral Brands -->
+        <div class="brand-carousel">
+          <div class="brand-track">
+            <img src="/public/brand-logos/logitech.png" class="brand-logo" alt="Logitech" />
+            <img src="/public/brand-logos/razer.png" class="brand-logo" alt="Razer" />
+            <img src="/public/brand-logos/corsair.png" class="brand-logo" alt="Corsair" />
+            <img src="/public/brand-logos/steelseries.png" class="brand-logo" alt="SteelSeries" />
+            <img src="/public/brand-logos/hyperx.png" class="brand-logo" alt="HyperX" />
+            <img src="/public/brand-logos/redragon.png" class="brand-logo" alt="Redragon" />
+            <img src="/public/brand-logos/coolermaster.png" class="brand-logo" alt="Cooler Master" />
+            <img src="/public/brand-logos/a4tech.png" class="brand-logo" alt="A4Tech" />
+            <img src="/public/brand-logos/zebronics.png" class="brand-logo" alt="Zebronics" />
+            <img src="/public/brand-logos/portronics.png" class="brand-logo" alt="Portronics" />
+            <img src="/public/brand-logos/rapoo.png" class="brand-logo" alt="Rapoo" />
+            <img src="/public/brand-logos/redgear.png" class="brand-logo" alt="Redgear" />
+            <img src="/public/brand-logos/cosmicbyte.png" class="brand-logo" alt="Cosmic Byte" />
+            <img src="/public/brand-logos/viewsonic.png" class="brand-logo" alt="ViewSonic" />
+            <img src="/public/brand-logos/benq.png" class="brand-logo" alt="BenQ" />
+            <img src="/public/brand-logos/philips.png" class="brand-logo" alt="Philips" />
+            <!-- duplicate for seamless loop -->
+            <img src="/public/brand-logos/logitech.png" class="brand-logo" alt="Logitech" />
+            <img src="/public/brand-logos/razer.png" class="brand-logo" alt="Razer" />
+            <img src="/public/brand-logos/corsair.png" class="brand-logo" alt="Corsair" />
+            <img src="/public/brand-logos/steelseries.png" class="brand-logo" alt="SteelSeries" />
+            <img src="/public/brand-logos/hyperx.png" class="brand-logo" alt="HyperX" />
+            <img src="/public/brand-logos/redragon.png" class="brand-logo" alt="Redragon" />
+            <img src="/public/brand-logos/coolermaster.png" class="brand-logo" alt="Cooler Master" />
+            <img src="/public/brand-logos/a4tech.png" class="brand-logo" alt="A4Tech" />
+            <img src="/public/brand-logos/zebronics.png" class="brand-logo" alt="Zebronics" />
+            <img src="/public/brand-logos/portronics.png" class="brand-logo" alt="Portronics" />
+            <img src="/public/brand-logos/rapoo.png" class="brand-logo" alt="Rapoo" />
+            <img src="/public/brand-logos/redgear.png" class="brand-logo" alt="Redgear" />
+            <img src="/public/brand-logos/cosmicbyte.png" class="brand-logo" alt="Cosmic Byte" />
+            <img src="/public/brand-logos/viewsonic.png" class="brand-logo" alt="ViewSonic" />
+            <img src="/public/brand-logos/benq.png" class="brand-logo" alt="BenQ" />
+            <img src="/public/brand-logos/philips.png" class="brand-logo" alt="Philips" />
+          </div>
+        </div>
+
+        <!-- Row 3: Indian Computer Brands -->
+        <div class="brand-carousel">
+          <div class="brand-track">
+            <img src="/public/brand-logos/hcl.png" class="brand-logo" alt="HCL" />
+            <img src="/public/brand-logos/iball.png" class="brand-logo" alt="iBall" />
+            <img src="/public/brand-logos/lava.png" class="brand-logo" alt="Lava" />
+            <img src="/public/brand-logos/jiobook.png" class="brand-logo" alt="JioBook" />
+            <img src="/public/brand-logos/wipro.png" class="brand-logo" alt="Wipro" />
+            <img src="/public/brand-logos/micromax.png" class="brand-logo" alt="Micromax" />
+            <!-- duplicate for seamless loop -->
+            <img src="/public/brand-logos/hcl.png" class="brand-logo" alt="HCL" />
+            <img src="/public/brand-logos/iball.png" class="brand-logo" alt="iBall" />
+            <img src="/public/brand-logos/lava.png" class="brand-logo" alt="Lava" />
+            <img src="/public/brand-logos/jiobook.png" class="brand-logo" alt="JioBook" />
+            <img src="/public/brand-logos/wipro.png" class="brand-logo" alt="Wipro" />
+            <img src="/public/brand-logos/micromax.png" class="brand-logo" alt="Micromax" />
+          </div>
+        </div>
+
       </div>
     </section>
 

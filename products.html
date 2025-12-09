@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products – Netzwerks</title>
+  <meta name="description" content="Products we deal with: laptops, desktops, spares, cables, adapters, networking, storage, monitors, printers, workstations, power & charging." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="shortcut icon" href="assets/images/logo.png" />
+  <meta property="og:title" content="Products – Netzwerks" />
+  <meta property="og:description" content="Browse categories of IT products and solutions." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Products – Netzwerks" />
+  <meta name="twitter:description" content="Browse categories of IT products and solutions." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Products – Netzwerks"}</script>
+  <style>
+    :root[data-theme="light"] {
+      --card-bg: #ffffff;
+      --text-primary: #000000;
+    }
+    :root[data-theme="dark"] {
+      --card-bg: #1a1e29;
+      --text-primary: #ffffff;
+    }
+    .product-showcase { padding: 60px 0; }
+    .product-showcase .page-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 0 0 15px 0;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .product-card h3 {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 18px;
+      color: var(--text-primary);
+    }
+    @media (max-width: 768px) {
+      .product-showcase { padding: 40px 0; }
+      .product-showcase .page-title { font-size: 26px; margin-bottom: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Netzwerks Home">
+        <div class="nav-brand">
+          <img src="assets/images/logo.png" class="nav-logo" alt="Netzwork Logo" />
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a href="services.html" data-nav>Services</a>
+        <a href="contact.html" data-nav>Contact</a>
+        <a href="products.html" data-nav>Products</a>
+      </nav>
+      <div class="row" style="align-items:center">
+        <button id="theme-toggle" class="theme-toggle"><span id="theme-icon">🌙</span></button>
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="container">
+        <a href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a href="services.html" data-nav>Services</a>
+        <a href="products.html" data-nav>Products</a>
+        <a href="contact.html" data-nav>Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-showcase">
+      <div class="container">
+        <h2 class="page-title">Products We Deal With</h2>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/laptops/800/600" alt="Laptops" />
+            <h3>Laptops</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/desktops/800/600" alt="Desktops" />
+            <h3>Desktops</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/spares/800/600" alt="Spares" />
+            <h3>Spares</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/cables/800/600" alt="Cables" />
+            <h3>Cables</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/adapters/800/600" alt="Adapters" />
+            <h3>Adapters</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/networking/800/600" alt="Networking" />
+            <h3>Networking</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/storage/800/600" alt="Storage" />
+            <h3>Storage</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/monitors/800/600" alt="Monitors" />
+            <h3>Monitors</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/printers/800/600" alt="Printers" />
+            <h3>Printers</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/workstations/800/600" alt="Workstations" />
+            <h3>Workstations</h3>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/power/800/600" alt="Power & Charging" />
+            <h3>Power & Charging</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo" style="margin-bottom:8px">
+          <img src="assets/images/logo.png" class="footer-logo-img" alt="Netzwork Logo" />
+        </div>
+        <p class="muted">IT products and solutions.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <a href="index.html">Home</a><br/>
+        <a href="about.html">About</a><br/>
+        <a href="services.html">Services</a><br/>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p class="muted">No.265, First Floor, 6th Main, 4th Cross Mico Layout, BTM 2nd Stage, Bangalore - 560076</p>
+        <a href="mailto:contact@netzwerk.systems">contact@netzwerk.systems</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:24px">
+      <p class="muted">© <span id="y"></span> Netzwerks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
