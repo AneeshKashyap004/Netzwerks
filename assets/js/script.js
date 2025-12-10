@@ -150,23 +150,7 @@ if(msBtn){
   });
 }
 
-// Generic dropdown toggles
-document.querySelectorAll('[data-dropdown]')?.forEach(drop=>{
-  const btn = drop.querySelector('[data-dropdown-toggle]');
-  const panel = drop.querySelector('[data-dropdown-panel]');
-  if(btn && panel){
-    btn.addEventListener('click',()=>{
-      const open = panel.getAttribute('data-open')==='true';
-      panel.setAttribute('data-open', String(!open));
-      panel.style.maxHeight = !open ? panel.scrollHeight + 'px' : '0px';
-    });
-    // initialize
-    panel.style.overflow='hidden';
-    panel.style.transition='max-height .28s ease';
-    panel.style.maxHeight='0px';
-    panel.setAttribute('data-open','false');
-  }
-});
+// Dropdown toggles removed: offerings grid is always visible
 
 // Simple form validation
 function validateForm(form){
